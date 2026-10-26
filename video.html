@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thư viện Video - Bảo tồn Đại Dương</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html"><strong>OceanEco</strong></a>
+    </div>
+    <nav class="main-nav" aria-label="Menu chính">
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="gallery.html">Khám phá</a></li>
+        <li><a href="video.html" class="active" aria-current="page">Video</a></li>
+        <li><a href="audio.html">Âm thanh</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-container">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <ol style="list-style: none; padding: 0; display: flex; gap: 10px;">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li>/</li>
+        <li aria-current="page">Video Bài Giảng</li>
+      </ol>
+    </nav>
+
+    <article class="media-article">
+      <h1>Video: Hệ sinh thái San hô Việt Nam</h1>
+
+      <!-- Trình phát Video tùy chỉnh -->
+      <section class="video-player-wrapper">
+        <div class="video-responsive-16-9">
+          <video id="myVideo" preload="metadata">
+            <!-- Thay thế nguồn video thực tế của bạn vào đây -->
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ thẻ video.
+          </video>
+        </div>
+
+        <div class="custom-controls" style="margin-top: 10px; display: flex; gap: 10px; align-items: center;">
+          <button id="playPauseBtn">Phát</button>
+          <input type="range" id="seekBar" value="0" max="100" style="flex: 1;">
+          <span id="timeDisplay">00:00</span>
+        </div>
+      </section>
+
+      <!-- Tải danh sách động qua Fetch JSON -->
+      <section class="extra-media" style="margin-top: 30px;">
+        <h2>Danh sách tài liệu liên quan</h2>
+        <div id="mediaList" class="media-grid"></div>
+        <button id="loadMoreBtn" style="margin-top: 15px; padding: 8px 16px;">Xem thêm tài liệu</button>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Dự án Bảo tồn Sinh thái Biển.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
